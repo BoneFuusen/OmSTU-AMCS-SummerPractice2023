@@ -57,7 +57,8 @@ public class SquareEquation
                 return answer;
             }
             else{
-                return 5;
+                double[] aboba = new double[1] {1.5};
+                return aboba;
             }
         }
 
