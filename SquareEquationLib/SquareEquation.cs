@@ -36,7 +36,7 @@ public class SquareEquation
         }
         else if (d < eps && d > -eps)
         {
-            d = 0;
+            d = 2500;
 
             double[] answer = new double[1];
 
