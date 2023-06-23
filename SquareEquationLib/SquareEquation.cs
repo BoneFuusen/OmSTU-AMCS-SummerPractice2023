@@ -45,20 +45,18 @@ public class SquareEquation
         }
         if (d < 0)
         {
-            if (d < eps && d > (-eps)){
-                d = 0;
+            return Array.Empty<double>();
+        }
+        if (d < eps && d > (-eps)){
+            d = 0;
 
-                double[] answer = new double[1];
+            double[] answer = new double[1];
 
-                double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
 
-                answer[0] = x1;
+            answer[0] = x1;
 
-                return answer;
-            }
-            else{
-                return Array.Empty<double>();
-            }
+            return answer;
         }
 
         throw new NotImplementedException();
