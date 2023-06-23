@@ -45,7 +45,7 @@ public class SquareEquation
         }
         if (d < 0)
         {
-            if (d > -eps){
+            if (Math.Abs(d)<eps){
                 d = 0;
 
                 double[] answer = new double[1];
