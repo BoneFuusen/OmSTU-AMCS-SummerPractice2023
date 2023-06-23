@@ -34,7 +34,7 @@ public class SquareEquation
             
             return answer;
         }
-        if (d == 0)
+        else if (d < eps && d > -eps)
         {
             double[] answer = new double[1];
 
@@ -44,22 +44,9 @@ public class SquareEquation
 
             return answer;
         }
-        if (d < 0)
+        else
         {
-            if (d < eps && d > -eps){
-                d = 0;
-
-                double[] answer = new double[1];
-
-                double x1 = -b/2;
-
-                answer[0] = x1;
-
-                return answer;
-            }
-            else{
-                return Array.Empty<double>();
-            }
+            return Array.Empty<double>();
         }
 
         throw new NotImplementedException();
