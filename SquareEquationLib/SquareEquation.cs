@@ -7,17 +7,17 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        double eps = 1e-9;
+        const double eps = 1e-9;
 
-        if (-eps < a && a > eps)
+        if (a == 0)
         {
-            throw new System.ArgumentException();
+            throw new System.ArgumentException("");
         }
         if ((a + b + c) == double.NegativeInfinity ||
         (a + b + c) == double.PositiveInfinity ||
         double.IsNaN(a + b + c))
         {
-            throw new System.ArgumentException();
+            throw new System.ArgumentException("");
         }
 
         double d = b*b-4*a*c;
