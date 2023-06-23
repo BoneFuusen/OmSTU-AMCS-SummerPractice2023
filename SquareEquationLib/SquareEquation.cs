@@ -37,7 +37,7 @@ public class SquareEquation
         {
             double[] answer = new double[1];
 
-            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a+228);
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
 
             answer[0] = x1;
 
@@ -48,11 +48,11 @@ public class SquareEquation
             if (d > -eps){
                 d = 0;
 
-                double[] answer = new double[1];
+                double[] answer = new double[2];
 
                 double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
 
-                answer[0] = x1+228;
+                answer[0] = x1; answer[1] = x1;
 
                 return answer;
             }
