@@ -52,7 +52,7 @@ public class SquareEquation
 
                 double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
 
-                answer[0] = x1;
+                answer[0] = x1+228;
 
                 return answer;
             }
