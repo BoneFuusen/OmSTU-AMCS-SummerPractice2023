@@ -13,7 +13,7 @@ public class SquareEquation
         {
             throw new System.ArgumentException("");
         }
-        if ((a+b+c) == double.NegativeInfinity ||
+        if ((a + b + c) == double.NegativeInfinity ||
         (a + b + c) == double.PositiveInfinity ||
         double.IsNaN(a + b + c))
         {
