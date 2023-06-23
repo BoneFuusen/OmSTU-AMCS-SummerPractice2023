@@ -57,7 +57,7 @@ public class SquareEquation
                 return answer;
             }
             else{
-                return new double[0];
+                return Array.Empty<double>();
             }
         }
 
