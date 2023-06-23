@@ -57,8 +57,7 @@ public class SquareEquation
                 return answer;
             }
             else{
-                double[] aboba = new double[1] {1.5};
-                return aboba;
+                return Array.Empty<double>();
             }
         }
 
