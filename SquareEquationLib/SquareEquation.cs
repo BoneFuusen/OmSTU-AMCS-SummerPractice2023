@@ -46,8 +46,6 @@ public class SquareEquation
         if (d < 0)
         {
             if (d > -eps){
-                d = 0;
-
                 double[] answer = new double[2];
 
                 double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
