@@ -36,7 +36,7 @@ public class SquareEquation
         }
         if(d < 0)
         {
-            if (d <= double.Epsilon && d > -double.Epsilon)
+            if (d < eps && d > -eps)
             {
                 d = 0;
 
