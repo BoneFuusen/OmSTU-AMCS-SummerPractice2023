@@ -51,9 +51,9 @@ public class SquareEquation
                 d = 0;
                 double[] answer = new double[2];
 
-                double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a); double x2 = c/x1;
+                double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
 
-                answer[0] = x1; answer[1] = x2;
+                answer[0] = x1;
 
                 return answer;
             }
