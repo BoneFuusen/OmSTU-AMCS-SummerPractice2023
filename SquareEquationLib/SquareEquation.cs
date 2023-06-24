@@ -22,7 +22,7 @@ public class SquareEquation
 
         double d = b*b-4*a*c;
 
-        if (d > 0)
+        if (d > 0 && d > eps)
         {
             double[] answer = new double[2];
 
