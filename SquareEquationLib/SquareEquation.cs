@@ -34,21 +34,24 @@ public class SquareEquation
             
             return answer;
         }
-        else if (d < eps && d > -eps)
+        if(d < 0)
         {
-            d = 2500;
+            if (d <= double.Epsilon && d > -double.Epsilon)
+            {
+                d = 0;
 
-            double[] answer = new double[1];
+                double[] answer = new double[1];
 
-            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
+                double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
 
-            answer[0] = x1;
+                answer[0] = x1;
 
-            return answer;
-        }
-        else
-        {
-            return Array.Empty<double>();
+                return answer;
+            }
+            else
+            {
+                return Array.Empty<double>();
+            }
         }
 
         throw new NotImplementedException();
