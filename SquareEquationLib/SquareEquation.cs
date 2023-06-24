@@ -7,7 +7,7 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        const double eps = 1e-16;
+        const double eps = 1e-9;
 
         if (a == 0)
         {
