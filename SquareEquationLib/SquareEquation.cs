@@ -9,24 +9,25 @@ public class SquareEquation
     {
         const double eps = 1e-9;
 
-        if (a == 0)
+        if (a > -eps && a < eps)
         {
-            throw new System.ArgumentException("");
+            throw new System.ArgumentException();
         }
-        if ((a + b + c) == double.NegativeInfinity ||
-        (a + b + c) == double.PositiveInfinity ||
+        if (double.IsInfinity(a+b+c) ||
         double.IsNaN(a + b + c))
         {
-            throw new System.ArgumentException("");
+            throw new ArgumentException();
         }
 
-        double d = b*b-4*a*c;
+        b = b/a; c = c/a;
+
+        double d = b*b-4*c;
 
         if (d > 0 && d > eps)
         {
             double[] answer = new double[2];
 
-            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
             double x2 = c/x1;
 
             answer[0] = x1; answer[1] = x2;
@@ -37,7 +38,7 @@ public class SquareEquation
         {
             double[] answer = new double[1];
 
-            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
 
             answer[0] = x1;
 
