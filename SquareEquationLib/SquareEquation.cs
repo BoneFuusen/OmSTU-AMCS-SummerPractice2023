@@ -62,6 +62,19 @@ public class SquareEquation
                 return Array.Empty<double>();
             }
         }
+        if (d > 0 && d < eps){
+            
+            d = 0; 
+
+            double[] answer = new double[2];
+
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/2;
+
+            answer[0] = x1;
+
+            return answer;
+
+        }
 
         throw new NotImplementedException();
     }
