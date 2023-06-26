@@ -76,7 +76,6 @@ public class SquareEquation
             return answer;
 
         }
-
         throw new NotImplementedException();
     }
 }
