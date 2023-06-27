@@ -51,5 +51,37 @@ public class SquareEquationTests
     {
         Assert.Throws<System.ArgumentException>(() => SquareEquation.Solve(1, 1, double.PositiveInfinity));
     }
+
+    [Fact]
+    public void D_is_zero()
+    {
+        var res = SquareEquation.Solve(16, -40, 25);
+        Type resType = res.GetType();
+        Assert.True(resType.IsArray && res.Length == 1);
+    }
+
+    [Fact]
+    public void D_lessthan_zero()
+    {
+        var res = SquareEquation.Solve(2, 5, 16);
+        Assert.True(res == Array.Empty<double>());
+    }
+
+    [Fact]
+    public void D_morethan_zero()
+    {
+        var res = SquareEquation.Solve(2, 15, 16);
+        Type resType = res.GetType();
+        Assert.True(resType.IsArray && res.Length == 2);        
+    }
+
+    [Fact]
+    public void D_is_eps()
+    {
+        var res = SquareEquation.Solve(1, Math.Sqrt(eps), 0);
+
+        Type resType = res.GetType();
+        Assert.True(resType.IsArray && res.Length == 1);
+    }
 }
 }
