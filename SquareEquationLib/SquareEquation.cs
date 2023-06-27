@@ -32,15 +32,12 @@ public class SquareEquation
             
             return answer;
         }
-        if (d <= eps && d > -eps)
+        if (d < eps && d > -eps)
         {
             d = 0;
             double[] answer = new double[1];
-
             double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
-
             answer[0] = x1;
-
             return answer;
         }
         else

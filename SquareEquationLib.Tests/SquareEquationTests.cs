@@ -83,5 +83,15 @@ public class SquareEquationTests
         Type resType = res.GetType();
         Assert.True(resType.IsArray && res.Length == 1);
     }
+
+    [Fact]
+    public void D_is_epsneg()
+    {
+        var res = SquareEquation.Solve(0.25, 0, eps);
+
+        Type resType = res.GetType();
+        Assert.True(resType.IsArray && res.Length == 1);
+
+    }
 }
 }
