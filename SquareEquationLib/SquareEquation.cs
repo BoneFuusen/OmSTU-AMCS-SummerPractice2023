@@ -16,7 +16,7 @@ public class SquareEquation
         if (double.IsInfinity(a+b+c) ||
         double.IsNaN(a + b + c))
         {
-            throw new ArgumentException();
+            throw new System.ArgumentException();
         }
 
         b = b/a; c = c/a;
@@ -34,7 +34,7 @@ public class SquareEquation
             
             return answer;
         }
-        if(d==0)
+        if(d == 0)
         {
             double[] answer = new double[1];
 

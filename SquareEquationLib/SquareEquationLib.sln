@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.001.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquareEquationLib", "SquareEquationLib.csproj", "{7239A357-AF34-41A7-B4EB-57F81F395568}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareEquationLib.Tests", "..\SquareEquationLib.Tests\SquareEquationLib.Tests.csproj", "{4A97ACB9-4EDE-42C0-9F9D-9776B0A0437E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7239A357-AF34-41A7-B4EB-57F81F395568}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7239A357-AF34-41A7-B4EB-57F81F395568}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7239A357-AF34-41A7-B4EB-57F81F395568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A97ACB9-4EDE-42C0-9F9D-9776B0A0437E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A97ACB9-4EDE-42C0-9F9D-9776B0A0437E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A97ACB9-4EDE-42C0-9F9D-9776B0A0437E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A97ACB9-4EDE-42C0-9F9D-9776B0A0437E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
