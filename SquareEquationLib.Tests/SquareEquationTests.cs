@@ -87,11 +87,19 @@ public class SquareEquationTests
     [Fact]
     public void D_is_epsneg()
     {
-        var res = SquareEquation.Solve(0.25, 0, eps);
+        var res = SquareEquation.Solve(0.25, 0, eps-(1e-18));
 
         Type resType = res.GetType();
         Assert.True(resType.IsArray && res.Length == 1);
+    }
 
+    [Fact]
+    public void D_islessthan_eps()
+    {
+        var res = SquareEquation.Solve(1, Math.Sqrt(eps - (1e-18)), 0);
+
+        Type resType = res.GetType();
+        Assert.True(resType.IsArray && res.Length == 1);
     }
 }
 }

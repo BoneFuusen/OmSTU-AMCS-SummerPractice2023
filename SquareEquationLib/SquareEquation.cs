@@ -32,7 +32,7 @@ public class SquareEquation
             
             return answer;
         }
-        if (d < eps && d > -eps)
+        if (d <= eps && d > -eps)
         {
             d = 0;
             double[] answer = new double[1];
