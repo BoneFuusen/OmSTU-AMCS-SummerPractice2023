@@ -2,7 +2,7 @@ name: square equation test
 
 on:
   push:
-    branches: ["square_equation", "square_eq_test"]
+    branches: ["square_equation", "square_eq_test", "BDD"]
 
 jobs:
   build:
@@ -27,3 +27,6 @@ jobs:
 
       - name: MyTest
         run: cd SquareEquationLib.Tests ; dotnet test
+
+      - name: BDD.Coverage
+        run: cd BDD.Tests ; dotnet test --collect:"XPlat Code Coverage"
