@@ -7,7 +7,7 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        const double eps = 1e-9;
+        const double eps = 1e-6;
 
         if (a > -eps && a < eps)
         {
@@ -21,16 +21,17 @@ public class SquareEquation
 
         double d = b*b-4*a*c;
 
+
         if (d > 0 && d > eps)
         {
-            double[] answer = new double[2];
-
-            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d))/(2*a);
-            double x2 = c/x1;
-
-            answer[0] = x1; answer[1] = x2;
-            
-            return answer;
+            if (b != 0) { 
+            double x1 = -(b + Math.Sign(b) * Math.Sqrt(d)) / 2, x2 = c / x1; 
+            return new double[2] {x1, x2}; 
+            }
+            else { 
+            double x1 = -(b + Math.Sqrt(d)) / 2, x2 = c / x1; 
+            return new double[2] {x1, x2}; 
+            }
         }
         if (d <= eps && d > -eps)
         {

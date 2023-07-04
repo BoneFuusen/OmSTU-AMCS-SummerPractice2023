@@ -101,5 +101,12 @@ public class SquareEquationTests
         Type resType = res.GetType();
         Assert.True(resType.IsArray && res.Length == 1);
     }
+
+    [Fact]
+    public void test1(){
+        var res = SquareEquation.Solve(1, 0, 1);
+
+        Assert.True(res == Array.Empty<double>());
+    }
 }
 }
