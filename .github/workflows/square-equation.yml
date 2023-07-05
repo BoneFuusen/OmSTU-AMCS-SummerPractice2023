@@ -1,8 +1,8 @@
-name: square equation test
+name: spacebattletest
 
 on:
   push:
-    branches: ["square_equation"]
+    branches: ["Space"]
 
 jobs:
   build:
@@ -17,10 +17,10 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies
-        run: dotnet restore SquareEquationLib
+        run: dotnet restore SpaceBattle
 
       - name: Build
-        run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build SpaceBattle --no-restore /p:ContinuousIntegrationBuild=true
 
       - name: Test
-        run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
+        run: cd Space.Tests ; dotnet test ; dotnet test --collect:"XPlat Code Coverage"; cd ..
