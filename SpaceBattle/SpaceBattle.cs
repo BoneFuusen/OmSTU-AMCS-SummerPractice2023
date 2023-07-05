@@ -11,4 +11,26 @@ public class Ship
         }
     }
 }
+
+public class Ship_fuel
+{
+    public static double FuelCalc(double fuel, double cost){
+        if (fuel < cost){
+            throw new System.ArgumentException();
+        }
+        else{
+            return fuel - cost;
+        }
+    }
+}
+
+public class Ship_angle
+{
+    public static double AngleCalc(double angle, double angle_spd, bool Angle, bool Angle_spd, bool poss1){
+        if (!Angle || !Angle_spd || !poss1){
+            throw new System.ArgumentException();
+        }
+        return angle + angle_spd;
+    }
+}
 }
